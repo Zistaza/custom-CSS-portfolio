@@ -1,0 +1,114 @@
+.contact {
+    background-color: var(--bg-color);
+    padding: 12rem; 
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: white;
+    text-align: center;
+    text-decoration:underline;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%; 
+    max-width: 500px; /* Limit width on larger screens */
+    padding: 2.5rem;
+    font-size: 1.6rem; 
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    font-size: 1.8rem; 
+    padding: 1rem 2rem; 
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and smaller laptops */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact form {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact form .input-box {
+        flex: 1;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        font-size: 1.8rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    .contact {
+        padding: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 2.4rem; /* Smaller font size for headings */
+        margin-bottom: 2rem;
+    }
+
+    .contact form {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        font-size: 1.6rem;
+        padding: 2rem;
+    }
+
+    .contact form .btn {
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* For larger screens and desktops */
+@media (min-width: 1025px) {
+    .contact form {
+        max-width: 1200px;
+        gap: 3rem;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        font-size: 1.8rem;
+        padding: 2.5rem;
+    }
+
+    .contact form .btn {
+        font-size: 2rem;
+        padding: 1.5rem 3rem;
+    }
+}

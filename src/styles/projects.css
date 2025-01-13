@@ -1,0 +1,118 @@
+.projects {
+    background: var(--second-bg-color);
+    padding: 2rem 5%;
+}
+
+.projects-box {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.projects .heading {
+    margin-bottom: 3rem;
+    text-decoration:underline;
+}
+
+.projects-box img {
+    width: 35rem;
+    border-radius: 20%;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.3s ease-in-out;
+}
+
+.projects-box img:hover {
+    transform: scale(1.1);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    padding: 2rem 0;
+}
+
+.projects-item {
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(238, 238, 238, 0.2);
+    border-radius: 6rem;
+    padding: 3rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+
+.projects-item:hover {
+    border: 6px solid var(--main-color);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+.projects-item h2 {
+    font-size: 2.4rem;
+}
+
+.projects-item p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+#star {
+    color: gold;
+    font-size: 2rem;
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+    
+    .projects-box img {
+        width: 36rem;
+    }
+
+    .projects-item h2 {
+        font-size: 2rem;
+    }
+
+    .projects-item p {
+        font-size: 1.2rem;
+    }
+
+    .wrapper {
+        gap: 20rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    .projects-box img {
+        width: 36rem;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr; /* Single-column layout for small screens */
+    }
+
+    .projects-item {
+        padding: 2rem;
+    }
+
+    .projects-item h2 {
+        font-size: 1.8rem;
+    }
+
+    .projects-item p {
+        font-size: 1.1rem;
+    }
+}

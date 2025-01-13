@@ -1,0 +1,162 @@
+/* Base styles */
+.services {
+    background: var(--bg-color);
+    color: white;
+    padding: 2rem;
+}
+
+.services h1 {
+    margin-bottom: 5rem;
+    color: white;
+    font-weight: 800;
+    text-decoration:underline;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
+    align-items: center;
+    gap: 2rem;
+}
+
+.services-box {
+    background-color: var(--main-color);
+    height: auto;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 2rem;
+}
+
+.services-box:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.services-box .services-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding: 2rem;
+}
+
+.services-info h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.services-info p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: auto;
+}
+
+/* Responsive Styles */
+
+/* Small Screens (Mobile) */
+@media (max-width: 600px) {
+    .services {
+        padding: 1.5rem;
+    }
+
+    .services h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .services-box {
+        padding: 1.5rem;
+    }
+
+    .services-info h4 {
+        font-size: 1.8rem;
+    }
+
+    .services-info p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .services-container {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 0.2rem;
+    }
+
+    .services-box {
+        padding: 2rem;
+    }
+
+    .services-info h4 {
+        font-size: 2rem;
+    }
+
+    .services-info p {
+        font-size: 1.3rem;
+    }
+
+    .services h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Large Screens (Laptops) */
+@media (min-width: 1025px) {
+    .services-container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .services-box {
+        height: 300px;
+        padding: 3rem;
+    }
+
+    .services-info h4 {
+        font-size: 2.5rem;
+    }
+
+    .services-info p {
+        font-size: 1.5rem;
+    }
+
+    .services h1 {
+        font-size: 8rem;
+        margin-bottom: 4rem;
+    }
+}
+
+/* Extra Large Screens (Wide Desktops) */
+@media (min-width: 1600px) {
+    .services-container {
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+        gap: 3rem;
+    }
+
+    .services-box {
+        height: 350px;
+        padding: 4rem;
+    }
+
+    .services-info h4 {
+        font-size: 3rem;
+    }
+
+    .services-info p {
+        font-size: 1.6rem;
+    }
+
+    .services h1 {
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }
+}
